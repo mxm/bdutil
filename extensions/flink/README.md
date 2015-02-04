@@ -31,7 +31,5 @@ To bring up the Flink cluster on Google Compute Engine, execute:
 To run a Flink example job:
 
     ./bdutil shell
-    curl http://www.gutenberg.org/cache/epub/2265/pg2265.txt > text
-    gsutil cp text gs://<bucket_name>/text
     cd /home/hadoop/flink-install/bin
-    ./flink run ../examples/flink-java-examples-*-WordCount.jar gs://<bucket_name>/text gs://<bucket_name>/output
+    ./flink run ../examples/flink-java-examples-*-WordCount.jar gs://dataflow-samples/shakespeare/othello.txt gs://<bucket_name>/output
